@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickVote</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+
+    <!-- Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+
+        <div class="absolute -top-32 -left-32
+                    w-96 h-96
+                    bg-cyan-500/20
+                    rounded-full
+                    blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-32 -right-32
+                    w-96 h-96
+                    bg-blue-600/20
+                    rounded-full
+                    blur-3xl">
+        </div>
+
+    </div>
+
+
+    <!-- Main -->
+    <main class="min-h-screen flex items-center justify-center px-4 py-10">
+
+        <div class="w-full max-w-2xl">
+
+
+            <!-- Header -->
+            <header class="text-center mb-8">
+
+                <div class="inline-flex items-center justify-center
+                            w-16 h-16
+                            rounded-2xl
+                            bg-white/10
+                            border border-white/10
+                            backdrop-blur-xl
+                            mb-5">
+
+                    <span class="text-3xl">🗳️</span>
+
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold">
+
+                    Quick<span class="text-cyan-400">Vote</span>
+
+                </h1>
+
+                <p class="text-slate-400 mt-3">
+                    Click. Vote. See the Result!
+                </p>
+
+            </header>
+
+
+            <!-- Card -->
+            <section class="bg-slate-900/70
+                            backdrop-blur-xl
+                            border border-white/10
+                            rounded-3xl
+                            shadow-2xl
+                            p-5 md:p-8">
+
+
+                <!-- Title -->
+                <div class="flex items-center justify-between mb-6">
+
+                    <div>
+
+                        <p class="text-xs
+                                  text-cyan-400
+                                  font-bold
+                                  tracking-widest">
+
+                            LIVE VOTING
+
+                        </p>
+
+                        <h2 class="text-2xl font-bold mt-1">
+                            Who is your favorite?
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Live -->
+                    <div class="flex items-center gap-2
+                                px-3 py-2
+                                rounded-full
+                                bg-cyan-400/10
+                                border border-cyan-400/20">
+
+                        <span class="w-2 h-2
+                                     bg-cyan-400
+                                     rounded-full
+                                     animate-pulse">
+                        </span>
+
+                        <span class="text-xs
+                                     text-cyan-400
+                                     font-bold">
+
+                            LIVE
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Candidates -->
+                <div
+                    id="candidateList"
+                    class="space-y-3">
+                </div>
+
+
+                <!-- Vote Button -->
+                <button
+                    id="voteButton"
+                    class="w-full mt-6
+                           flex items-center
+                           justify-center gap-2
+                           py-4
+                           rounded-xl
+                           bg-gradient-to-r
+                           from-cyan-500
+                           to-blue-600
+                           hover:from-cyan-400
+                           hover:to-blue-500
+                           active:scale-[0.98]
+                           transition
+                           font-bold
+                           shadow-lg
+                           shadow-cyan-500/20">
+
+                    <span>VOTE NOW</span>
+
+                    <span>→</span>
+
+                </button>
+
+
+                <!-- Message -->
+                <div
+                    id="message"
+                    class="text-center
+                           text-sm
+                           mt-4
+                           min-h-[20px]">
+                </div>
+
+
+                <!-- Divider -->
+                <div class="flex items-center gap-4 my-8">
+
+                    <div class="h-px bg-white/10 flex-1"></div>
+
+                    <span class="text-xs
+                                 text-slate-500
+                                 uppercase
+                                 tracking-widest">
+
+                        Live Results
+
+                    </span>
+
+                    <div class="h-px bg-white/10 flex-1"></div>
+
+                </div>
+
+
+                <!-- Results -->
+                <div
+                    id="result"
+                    class="space-y-5">
+                </div>
+
+
+                <!-- Total -->
+                <div class="mt-8 pt-5
+                            border-t border-white/10
+                            text-center">
+
+                    <p class="text-sm text-slate-400">
+                        Total Votes
+                    </p>
+
+                    <p
+                        id="totalVotes"
+                        class="text-3xl
+                               font-bold
+                               mt-1">
+
+                        0
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="text-center
+                           text-sm
+                           text-slate-600
+                           mt-6">
+
+                QuickVote • Mini Voting Application
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

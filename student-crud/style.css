@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    background:
+        radial-gradient(circle at top right, #dbeafe, transparent 35%),
+        #f4f7fb;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1050px, calc(100% - 30px));
+    margin: 35px auto 50px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    padding: 28px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(135deg, #0e3d91, #1656c1);
+    box-shadow: 0 15px 35px rgba(14, 61, 145, 0.2);
+}
+
+.badge {
+    color: #f5d784;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+.header p {
+    margin: 0;
+    color: #dbeafe;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 20px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.card {
+    padding: 22px;
+    border: 1px solid #dbe4f0;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.card h2 {
+    margin: 0 0 20px;
+    color: #0e3d91;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #bcc9d9;
+    border-radius: 9px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1656c1;
+    box-shadow: 0 0 0 3px #edf4ff;
+}
+
+.primary-button,
+.secondary-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.primary-button {
+    border: none;
+    color: white;
+    background: #1656c1;
+}
+
+.primary-button:hover {
+    background: #0e3d91;
+}
+
+.secondary-button {
+    margin-top: 8px;
+    border: 1px solid #dbe4f0;
+    color: #64748b;
+    background: white;
+}
+
+.secondary-button:hover {
+    background: #f8fafc;
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.message {
+    min-height: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.message.success,
+.message.error {
+    padding: 10px 12px;
+}
+
+.message.success {
+    color: #15803d;
+    background: #ecfdf3;
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    color: #c63737;
+    background: #fff0f0;
+    border: 1px solid #fecaca;
+}
+
+
+/* ================================
+   STUDENT LIST
+================================ */
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.list-header h2 {
+    margin: 0;
+}
+
+.storage-badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #76580c;
+    background: #fff7df;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.student-list {
+    display: grid;
+    gap: 10px;
+}
+
+.student-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border: 1px solid #dbe4f0;
+    border-radius: 12px;
+    background: #fbfdff;
+}
+
+.student-name {
+    font-weight: bold;
+}
+
+.student-number {
+    margin-right: 7px;
+    color: #b58b2f;
+}
+
+.score {
+    min-width: 55px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: #0e3d91;
+    background: #edf4ff;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.edit-button {
+    color: #0e3d91;
+    background: #edf4ff;
+}
+
+.edit-button:hover {
+    background: #dceaff;
+}
+
+.delete-button {
+    color: #c63737;
+    background: #fff0f0;
+}
+
+.delete-button:hover {
+    background: #ffe0e0;
+}
+
+.empty {
+    padding: 28px;
+    border: 1px dashed #b9c7d8;
+    border-radius: 12px;
+    text-align: center;
+    color: #64748b;
+    background: #fbfdff;
+}
+
+
+/* ================================
+   STATISTICS
+================================ */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    padding: 18px;
+    border-radius: 13px;
+    text-align: center;
+    color: #0e3d91;
+    background: #edf4ff;
+}
+
+.stat-box span {
+    display: block;
+    margin-bottom: 5px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-box strong {
+    font-size: 30px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .container {
+        width: calc(100% - 18px);
+        margin-top: 15px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .student-item {
+        grid-template-columns: 1fr auto;
+    }
+
+    .score {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .action-buttons {
+        grid-column: 1 / -1;
+    }
+
+    .edit-button,
+    .delete-button {
+        flex: 1;
+    }
+}
